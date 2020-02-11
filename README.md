@@ -1,2 +1,2 @@
 # Portfolio2
-Portfolio Website - this was the final project for my Clientside Web Development class at MCC.  We could choose the topic for our website.  We were required to use Bootstrap and jQuery.
+Portfolio Website - this was the final project for my Clientside Web Development class at MCC.  We could choose the topic for our website.  We were required to use Bootstrap and jQuery.  (Files for the Java projects mentioned in the portfolio are avaiable upon request.  I'm not sure if the professors are assigning the same final projects to the current Java I and II sections.  To avoid the possiblility of others copying my code, those final projects are not available publicly.)
