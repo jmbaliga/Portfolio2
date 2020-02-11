@@ -100,7 +100,7 @@
 if(!isset($_POST['submit']))
 {
 
-	echo "error; you need to submit the form!";
+	echo "error";
 }
 $name = $_POST['name'];
 $visitor_email = $_POST['email'];
@@ -109,27 +109,27 @@ $message = $_POST['message'];
 //Validate first
 if(empty($name)||empty($visitor_email))
 {
-    echo "Name and email are mandatory!";
+    echo "Please enter name and e-mail";
     exit;
 }
 
 if(IsInjected($visitor_email))
 {
-    echo "Bad email value!";
+    echo "Invalid email";
     exit;
 }
 
 $email_from = 'stardreamed@gmail.com';
 $email_subject = "New Form submission";
-$email_body = "You have received a new message from the user $name.\n".
-    "Here is the message:\n $message\n";
+$email_body = "You have received a new message from $name.\n".
+    "Message:\n $message\n";
 
 $to = "stardreamed@gmail.com";
 $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email \r\n";
-//Send the email!
+//Send the email
 mail($to,$email_subject,$email_body,$headers);
-//done. redirect to thank-you page.
+//redirect to thank-you page.
 header('Location: thank-you.html');
 
 
